@@ -18,4 +18,3 @@ module cda.common {
     }
     angular.module('cda').service('cdRgbToHex', CdRgbToHex);
 }
-

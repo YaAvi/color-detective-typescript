@@ -28,4 +28,3 @@ module cda.footer.buttons {
     }
     angular.module('cda').service('cdOpenImage', CdOpenImageService);
 }
-

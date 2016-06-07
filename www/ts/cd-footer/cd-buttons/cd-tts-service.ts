@@ -18,4 +18,3 @@ module cda.footer.buttons {
     }
     angular.module('cda').service('cdTTS', CdTTSService);
 }
-

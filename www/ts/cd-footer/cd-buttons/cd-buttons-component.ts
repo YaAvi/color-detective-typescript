@@ -7,4 +7,3 @@ module cda.footer.buttons {
 	}
 	angular.module('cda').component('cdButtons', ButtonsComponent.config);
 }
-

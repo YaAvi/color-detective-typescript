@@ -48,4 +48,3 @@ module cda.image {
     }
     angular.module('cda').service('cdImageSource', CdImage);
 }
-

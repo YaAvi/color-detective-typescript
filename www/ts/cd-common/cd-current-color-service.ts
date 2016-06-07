@@ -19,3 +19,4 @@ module cda.common {
     }
     angular.module('cda').service('cdCurrentColor', CdCurrentColor);
  }
+ 
