@@ -10,9 +10,9 @@ module cda.footer.buttons {
                 local: 'en-GB',
                 rate: 0.8
             }, function() {
-                console.log('tts has spoken');
+                //success
             }, function(reason) {
-                console.log(reason);
+                //error
             });
         }
     }

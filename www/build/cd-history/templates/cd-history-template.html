@@ -3,7 +3,9 @@
         <div class="del-one" ng-click="$ctrl.delOne()"><i class="material-icons">&#xE872;</i></div>
         <div class="del-all" ng-click="$ctrl.delAll()"><i class="material-icons">&#xE92B;</i></div>
     </div>
-    <div class="color-samples" ng-repeat="color in $ctrl.history() | reverse" class="color-samples" style="background-color:{{color.style.color}}; color:{{color.style.font}}">
-        <cd-color-sample color="color"></cd-color-sample>
+    <div class="color-sample-overflow">
+    	<div class="color-samples" ng-repeat="color in $ctrl.history() | reverse" class="color-samples" style="background-color:{{color.style.color}}; color:{{color.style.font}}">
+        	<cd-color-sample color="color"></cd-color-sample>
+    	</div>
     </div>
 </div>

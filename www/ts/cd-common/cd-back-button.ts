@@ -9,15 +9,15 @@ module cda.common {
 			this.onLoad();
 		}
 
-		onBackKeyDown = (): void => {
+		onBackKeyDown(): void  {
 			this.cdUrl.close();
-			this.cdHistory.close();
+			this.cdHistory.closeHistory();
 		}
-		onDeviceReady = (): void => {
-			document.addEventListener('backbutton', this.onBackKeyDown, true);
+		onDeviceReady(): void {
+			document.addEventListener('backbutton', this.onBackKeyDown.bind(this), true);
 		}
 		onLoad(): void {
-			document.addEventListener('deviceready', this.onDeviceReady, true);
+			document.addEventListener('deviceready', this.onDeviceReady.bind(this), true);
 		}
 	}
 	angular.module('cda').controller('cdBackButton', CdBackButton);

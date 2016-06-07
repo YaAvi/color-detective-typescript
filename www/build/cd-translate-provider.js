@@ -3,6 +3,7 @@ var cda;
     var TranslateProvider = (function () {
         function TranslateProvider($translateProvider) {
             this.$translateProvider = $translateProvider;
+            this.$translateProvider.useSanitizeValueStrategy('escape');
             this.$translateProvider.translations('en', {
                 'SELECTED_COLOR': 'Selected Color',
                 'TITLE': 'Color Detective'
