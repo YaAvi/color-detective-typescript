@@ -1,0 +1,8 @@
+.material-icons {
+    font-size: 2em !important;
+    transition: all .2s ease-out;
+}
+
+.button:active > .material-icons {
+    transform: scale(0.7);
+}

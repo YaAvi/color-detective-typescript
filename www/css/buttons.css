@@ -1,0 +1,28 @@
+.button-div {
+    position: fixed;
+    bottom: 0px;
+    width: 100%;
+}
+
+.button {
+    width: 20%;
+    text-align: center;
+    float: left;
+}
+
+.button:active {
+    opacity: 0.8;
+}
+
+button {
+    color: inherit;
+    border: none;
+    outline: none;
+    padding: 19px 0;
+    background-color: inherit;
+}
+
+button[disabled] {
+    pointer-events: none;
+    color: #707070;
+}
