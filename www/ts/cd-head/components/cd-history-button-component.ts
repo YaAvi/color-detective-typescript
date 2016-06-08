@@ -1,9 +1,9 @@
+import Ctrl = require('../cd-head-controller'); 
 module cda.head {
 	export class HistoryButtonComponent {
-		public static config = {
-    		templateUrl: 'build/cd-head/templates/cd-history-button-template.html',
-    		controller: 'cdHeadCtrl'
-		};
+		templateUrl = 'build/cd-head/templates/cd-history-button-template.html';
+		controller = Ctrl.cda.head.CdHeadCtrl;
 	}
-	angular.module('cda').component('cdHistoryButton', HistoryButtonComponent.config);
+
+	angular.module('cda').component('cdHistoryButton', new HistoryButtonComponent());
 }

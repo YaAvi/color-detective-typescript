@@ -1,11 +1,10 @@
 module cda.history {
 	export class ColorSampleComponent {
-		public static config: any = {
-		    templateUrl: 'build/cd-history/templates/cd-color-sample-template.html',
-		    bindings: {
-		        color: '='
-		    }
+		templateUrl = 'build/cd-history/templates/cd-color-sample-template.html';
+		bindings: any = {
+			color: '='
 		};
 	}
-	angular.module('cda').component('cdColorSample', ColorSampleComponent.config);
+
+	angular.module('cda').component('cdColorSample', new ColorSampleComponent());
 }

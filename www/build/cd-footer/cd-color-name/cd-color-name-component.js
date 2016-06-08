@@ -1,3 +1,5 @@
+"use strict";
+var Ctrl = require('../cd-footer-controller');
 var cda;
 (function (cda) {
     var footer;
@@ -6,15 +8,13 @@ var cda;
         (function (buttons) {
             var ColorNameComponent = (function () {
                 function ColorNameComponent() {
+                    this.templateUrl = 'build/cd-footer/cd-color-name/cd-color-name-template.html';
+                    this.controller = Ctrl.cda.footer.CdFooterCtrl;
                 }
-                ColorNameComponent.config = {
-                    templateUrl: 'build/cd-footer/cd-color-name/cd-color-name-template.html',
-                    controller: 'cdFooterCtrl'
-                };
                 return ColorNameComponent;
             }());
             buttons.ColorNameComponent = ColorNameComponent;
-            angular.module('cda').component('cdColorName', ColorNameComponent.config);
+            angular.module('cda').component('cdColorName', new ColorNameComponent());
         })(buttons = footer.buttons || (footer.buttons = {}));
     })(footer = cda.footer || (cda.footer = {}));
 })(cda || (cda = {}));

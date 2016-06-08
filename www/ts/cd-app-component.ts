@@ -1,9 +1,9 @@
+import Ctrl = require("./cd-common/cd-back-button");
 module cda {
 	export class AppComponent {
-		public static config = {
-			templateUrl: 'build/cd-app-template.html',
-			controller: 'cdBackButton'
-		};
+		templateUrl = 'build/cd-app-template.html';
+		controller = Ctrl.cda.common.CdBackButton;
 	}
-	angular.module('cda').component('cdApp', AppComponent.config);
+
+	angular.module('cda').component('cdApp', new AppComponent());
 }

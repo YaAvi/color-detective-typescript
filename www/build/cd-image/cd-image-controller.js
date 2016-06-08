@@ -1,3 +1,4 @@
+"use strict";
 var cda;
 (function (cda) {
     var image;
@@ -22,6 +23,6 @@ var cda;
             };
             return CdImageCtrl;
         }());
-        angular.module('cda').controller('cdImageCtrl', CdImageCtrl);
+        image.CdImageCtrl = CdImageCtrl;
     })(image = cda.image || (cda.image = {}));
-})(cda || (cda = {}));
+})(cda = exports.cda || (exports.cda = {}));

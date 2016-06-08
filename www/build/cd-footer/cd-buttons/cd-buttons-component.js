@@ -1,3 +1,5 @@
+"use strict";
+var Ctrl = require('../cd-footer-controller');
 var cda;
 (function (cda) {
     var footer;
@@ -6,15 +8,13 @@ var cda;
         (function (buttons) {
             var ButtonsComponent = (function () {
                 function ButtonsComponent() {
+                    this.templateUrl = 'build/cd-footer/cd-buttons/templates/cd-buttons-template.html';
+                    this.controller = Ctrl.cda.footer.CdFooterCtrl;
                 }
-                ButtonsComponent.config = {
-                    templateUrl: 'build/cd-footer/cd-buttons/templates/cd-buttons-template.html',
-                    controller: 'cdFooterCtrl'
-                };
                 return ButtonsComponent;
             }());
             buttons.ButtonsComponent = ButtonsComponent;
-            angular.module('cda').component('cdButtons', ButtonsComponent.config);
+            angular.module('cda').component('cdButtons', new ButtonsComponent());
         })(buttons = footer.buttons || (footer.buttons = {}));
     })(footer = cda.footer || (cda.footer = {}));
 })(cda || (cda = {}));

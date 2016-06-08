@@ -1,3 +1,4 @@
+"use strict";
 var cda;
 (function (cda) {
     var common;
@@ -21,6 +22,5 @@ var cda;
             return CdBackButton;
         }());
         common.CdBackButton = CdBackButton;
-        angular.module('cda').controller('cdBackButton', CdBackButton);
     })(common = cda.common || (cda.common = {}));
-})(cda || (cda = {}));
+})(cda = exports.cda || (exports.cda = {}));

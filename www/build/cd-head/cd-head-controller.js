@@ -1,3 +1,4 @@
+"use strict";
 var cda;
 (function (cda) {
     var head;
@@ -29,6 +30,5 @@ var cda;
             return CdHeadCtrl;
         }());
         head.CdHeadCtrl = CdHeadCtrl;
-        angular.module('cda').controller('cdHeadCtrl', CdHeadCtrl);
     })(head = cda.head || (cda.head = {}));
-})(cda || (cda = {}));
+})(cda = exports.cda || (exports.cda = {}));

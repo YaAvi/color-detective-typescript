@@ -1,9 +1,7 @@
 module cda.footer.buttons {
-    interface ICdTTSService {
-        speakColor(colorName): void;
-    }
-    export class CdTTSService implements ICdTTSService {
+    export class CdTTSService {
         constructor(private $cordovaTTS) {}
+
         speakColor(colorName): void {
             this.$cordovaTTS.speak({
                 text: colorName,
@@ -16,5 +14,6 @@ module cda.footer.buttons {
             });
         }
     }
+    
     angular.module('cda').service('cdTTS', CdTTSService);
 }

@@ -1,5 +1,6 @@
-var app;
-(function (app) {
+"use strict";
+var cda;
+(function (cda) {
     var footer;
     (function (footer) {
         var CdFooterCtrl = (function () {
@@ -44,6 +45,5 @@ var app;
             return CdFooterCtrl;
         }());
         footer.CdFooterCtrl = CdFooterCtrl;
-        angular.module('cda').controller('cdFooterCtrl', CdFooterCtrl);
-    })(footer = app.footer || (app.footer = {}));
-})(app || (app = {}));
+    })(footer = cda.footer || (cda.footer = {}));
+})(cda = exports.cda || (exports.cda = {}));

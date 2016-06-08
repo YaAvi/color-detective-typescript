@@ -1,3 +1,4 @@
+"use strict";
 var cda;
 (function (cda) {
     var history;
@@ -25,6 +26,5 @@ var cda;
             return CdHistoryCtrl;
         }());
         history.CdHistoryCtrl = CdHistoryCtrl;
-        angular.module('cda').controller('cdHistoryCtrl', CdHistoryCtrl);
     })(history = cda.history || (cda.history = {}));
-})(cda || (cda = {}));
+})(cda = exports.cda || (exports.cda = {}));

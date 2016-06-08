@@ -9,5 +9,6 @@ module cda {
 			this.$translateProvider.preferredLanguage('en');
 		}
 	}
+	
 	angular.module('cda').config(TranslateProvider);
 }

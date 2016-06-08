@@ -1,10 +1,5 @@
-module cda.common {
-	interface ICdBackButton {
-		onBackKeyDown(): void;
-		onDeviceReady(): void;
-		onLoad(): void;
-	}
-	export class CdBackButton implements ICdBackButton {
+export module cda.common {
+	export class CdBackButton {
 		constructor(private cdUrl: any, private cdHistory: any) {
 			this.onLoad();
 		}
@@ -13,12 +8,13 @@ module cda.common {
 			this.cdUrl.close();
 			this.cdHistory.closeHistory();
 		}
+
 		onDeviceReady(): void {
 			document.addEventListener('backbutton', this.onBackKeyDown.bind(this), true);
 		}
+
 		onLoad(): void {
 			document.addEventListener('deviceready', this.onDeviceReady.bind(this), true);
 		}
 	}
-	angular.module('cda').controller('cdBackButton', CdBackButton);
 }

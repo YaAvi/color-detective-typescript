@@ -1,8 +1,5 @@
 module cda.image {
-    interface ICdTouch {
-        touchHandler(e): void;
-    }
-    export class CdTouch implements ICdTouch {
+    export class CdTouch {
         constructor(private cdHistory,
                     private cdDetectColor,
                     private cdCurrentColor,
@@ -10,13 +7,14 @@ module cda.image {
                     private $cordovaRecents,
                     private cdRgbToHex,
                     private cdFontColor) {}
+
         touchHandler(e): void {
             var image = e.target,
                 pColor,
                 imageBounds = image.getBoundingClientRect(),
                 xCord = e.coords.start.x,
                 yCord = e.coords.start.y,
-                canvas = document.createElement('canvas'),
+                canvas = e.target.nextElementSibling,
                 ctx = canvas.getContext('2d');
             canvas.width = image.width;
             canvas.height = image.height + imageBounds.top; // draw it in the same spot
@@ -46,5 +44,6 @@ module cda.image {
             }
         }
     }
+
     angular.module('cda').service('cdTouch', CdTouch);
 }

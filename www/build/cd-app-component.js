@@ -1,14 +1,14 @@
+"use strict";
+var Ctrl = require("./cd-common/cd-back-button");
 var cda;
 (function (cda) {
     var AppComponent = (function () {
         function AppComponent() {
+            this.templateUrl = 'build/cd-app-template.html';
+            this.controller = Ctrl.cda.common.CdBackButton;
         }
-        AppComponent.config = {
-            templateUrl: 'build/cd-app-template.html',
-            controller: 'cdBackButton'
-        };
         return AppComponent;
     }());
     cda.AppComponent = AppComponent;
-    angular.module('cda').component('cdApp', AppComponent.config);
+    angular.module('cda').component('cdApp', new AppComponent());
 })(cda || (cda = {}));

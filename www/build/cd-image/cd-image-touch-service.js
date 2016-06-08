@@ -13,7 +13,7 @@ var cda;
                 this.cdFontColor = cdFontColor;
             }
             CdTouch.prototype.touchHandler = function (e) {
-                var image = e.target, pColor, imageBounds = image.getBoundingClientRect(), xCord = e.coords.start.x, yCord = e.coords.start.y, canvas = document.createElement('canvas'), ctx = canvas.getContext('2d');
+                var image = e.target, pColor, imageBounds = image.getBoundingClientRect(), xCord = e.coords.start.x, yCord = e.coords.start.y, canvas = e.target.nextElementSibling, ctx = canvas.getContext('2d');
                 canvas.width = image.width;
                 canvas.height = image.height + imageBounds.top; // draw it in the same spot
                 ctx.drawImage(image, 0, imageBounds.top, image.width, image.height);

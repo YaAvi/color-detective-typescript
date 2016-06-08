@@ -1,10 +1,5 @@
 module cda.footer.buttons {
-    interface ICdOpenImageService {
-        DATA_URL: number;
-        options: any;
-        openImage(source): void;
-    }
-    export class CdOpenImageService implements ICdOpenImageService {
+    export class CdOpenImageService {
         DATA_URL: number;
         options: any;
         constructor(private $cordovaCamera, private cdImageSource) {
@@ -16,6 +11,7 @@ module cda.footer.buttons {
                 sourceType: 0
             };
         }
+
         openImage(source): void {
             this.options.sourceType = source;
             this.$cordovaCamera.getPicture(this.options)
@@ -26,5 +22,6 @@ module cda.footer.buttons {
                 });
         }
     }
+    
     angular.module('cda').service('cdOpenImage', CdOpenImageService);
 }

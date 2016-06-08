@@ -1,9 +1,10 @@
+import Ctrl = require("./cd-history-controller");
+
 module cda.history {
 	export class HistoryComponent {
-		public static config = {
-		    templateUrl: 'build/cd-history/templates/cd-history-template.html',
-		    controller: 'cdHistoryCtrl'
-		};
+		templateUrl = 'build/cd-history/templates/cd-history-template.html';
+		controller = Ctrl.cda.history.CdHistoryCtrl;
 	}
-	angular.module('cda').component('cdHistoryBox', HistoryComponent.config);
+
+	angular.module('cda').component('cdHistoryBox', new HistoryComponent());
 }

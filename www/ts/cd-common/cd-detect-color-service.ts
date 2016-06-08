@@ -1,18 +1,15 @@
 module cda.common {
-    interface ICdDetectColor {
-        clsColor: number;
-        hexToRGB(hex, index): number;
-        colorName(R, G, B): string;
-    }
-    export class CdDetectColor implements ICdDetectColor {
+    export class CdDetectColor {
         clsColor: number;
         constructor(private clrData) {
             this.clsColor = 0;
         }
+
         hexToRGB(hex, index): number {
             var color = parseInt(hex.substring(index, index + 2), 16);
             return color;
         }
+
         colorName(R, G, B): string {
             var minDistance = 7777, distance, red, green, blue;
             for (var clr = 0; clr < this.clrData.length; clr++) {
@@ -28,5 +25,6 @@ module cda.common {
             return this.clrData[this.clsColor][1];
         }
     }
+    
     angular.module('cda').service('cdDetectColor', CdDetectColor);
 }

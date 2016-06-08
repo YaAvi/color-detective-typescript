@@ -12,9 +12,7 @@ var cda;
                 if (this.brightnessIsHigh(r, g, b)) {
                     return 'rgb(40,40,40)';
                 }
-                else {
-                    return 'floralwhite';
-                }
+                return 'floralwhite';
             };
             return CdFontColor;
         }());

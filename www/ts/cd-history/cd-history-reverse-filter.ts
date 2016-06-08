@@ -4,5 +4,6 @@ module cda.history {
 			return items.slice().reverse();
 		};
 	}
+	
 	angular.module('cda').filter('reverse', Reverse);
 }

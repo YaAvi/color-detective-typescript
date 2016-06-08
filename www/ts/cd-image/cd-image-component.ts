@@ -1,9 +1,9 @@
+import Ctrl = require("./cd-image-controller");
 module cda.image {
 	export class imageComponent {
-		public static config = {
-			templateUrl: 'build/cd-image/cd-image-template.html',
-			controller: 'cdImageCtrl'
-		};
+		templateUrl = 'build/cd-image/cd-image-template.html';
+		controller = Ctrl.cda.image.CdImageCtrl;
 	}
-	angular.module('cda').component('cdImage', imageComponent.config);
+	
+	angular.module('cda').component('cdImage', new imageComponent());
 }
