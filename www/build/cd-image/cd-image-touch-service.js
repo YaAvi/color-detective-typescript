@@ -3,11 +3,10 @@ var cda;
     var image;
     (function (image_1) {
         var CdTouch = (function () {
-            function CdTouch(cdHistory, cdDetectColor, cdCurrentColor, cdStatusar, $cordovaRecents, cdRgbToHex, cdFontColor) {
+            function CdTouch(cdHistory, cdDetectColor, cdCurrentColor, $cordovaRecents, cdRgbToHex, cdFontColor) {
                 this.cdHistory = cdHistory;
                 this.cdDetectColor = cdDetectColor;
                 this.cdCurrentColor = cdCurrentColor;
-                this.cdStatusar = cdStatusar;
                 this.$cordovaRecents = $cordovaRecents;
                 this.cdRgbToHex = cdRgbToHex;
                 this.cdFontColor = cdFontColor;
@@ -32,7 +31,6 @@ var cda;
                     };
                     this.cdHistory.add(color);
                     this.cdCurrentColor.setColor(color);
-                    this.cdStatusbar.setColor(color);
                     this.$cordovaRecents.setColor(color.hex);
                 }
             };

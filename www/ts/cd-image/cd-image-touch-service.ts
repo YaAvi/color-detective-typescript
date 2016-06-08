@@ -3,7 +3,6 @@ module cda.image {
         constructor(private cdHistory,
                     private cdDetectColor,
                     private cdCurrentColor,
-                    private cdStatusar,
                     private $cordovaRecents,
                     private cdRgbToHex,
                     private cdFontColor) {}
@@ -37,7 +36,6 @@ module cda.image {
                     };
                 this.cdHistory.add(color);
                 this.cdCurrentColor.setColor(color);
-                this.cdStatusbar.setColor(color);
                 this.$cordovaRecents.setColor(color.hex);
             }
         }

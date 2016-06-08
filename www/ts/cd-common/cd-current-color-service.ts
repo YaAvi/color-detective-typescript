@@ -1,7 +1,7 @@
 module cda.common {
     export class CdCurrentColor {
         currentColor: any;
-        constructor() {
+        constructor(private cdStatusbar) {
             this.currentColor = {};
         }
 
@@ -12,6 +12,7 @@ module cda.common {
         setColor(color): void {
             console.log(color);
             this.currentColor = color;
+            this.cdStatusbar.setColor(color);
         }
     }
     

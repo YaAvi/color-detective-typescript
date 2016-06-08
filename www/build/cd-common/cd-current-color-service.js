@@ -3,7 +3,8 @@ var cda;
     var common;
     (function (common) {
         var CdCurrentColor = (function () {
-            function CdCurrentColor() {
+            function CdCurrentColor(cdStatusbar) {
+                this.cdStatusbar = cdStatusbar;
                 this.currentColor = {};
             }
             CdCurrentColor.prototype.getColor = function () {
@@ -12,6 +13,7 @@ var cda;
             CdCurrentColor.prototype.setColor = function (color) {
                 console.log(color);
                 this.currentColor = color;
+                this.cdStatusbar.setColor(color);
             };
             return CdCurrentColor;
         }());

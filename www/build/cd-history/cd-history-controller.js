@@ -4,10 +4,9 @@ var cda;
     var history;
     (function (history) {
         var CdHistoryCtrl = (function () {
-            function CdHistoryCtrl(cdHistory, cdCurrentColor, cdStatusbar) {
+            function CdHistoryCtrl(cdHistory, cdCurrentColor) {
                 this.cdHistory = cdHistory;
                 this.cdCurrentColor = cdCurrentColor;
-                this.cdStatusbar = cdStatusbar;
             }
             CdHistoryCtrl.prototype.history = function () {
                 return this.cdHistory.getHistory();
@@ -26,7 +25,6 @@ var cda;
             };
             CdHistoryCtrl.prototype.setCurrentColor = function (color) {
                 this.cdCurrentColor.setColor(color);
-                this.cdStatusbar.setColor(color);
             };
             return CdHistoryCtrl;
         }());
