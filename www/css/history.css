@@ -29,7 +29,10 @@
     position: initial;
     float: left;
 }
-
+.color-samples:active {
+    transform: scale3d(0.9,0.9,1);
+    transition: all .1s ease-out;
+}
 .color-name {
     width: 100%;
     padding-top: 1px;

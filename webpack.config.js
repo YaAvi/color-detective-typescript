@@ -1,3 +1,5 @@
+var webpack = require('webpack');
+var PROD = process.env.PROD_ENV;
 module.exports = {
     entry: "./index.js",
     output: {
@@ -24,5 +26,10 @@ module.exports = {
             }
         ]
     },
-    plugins: []
+    plugins: PROD ? [
+        new webpack.optimize.UglifyJsPlugin({
+            sourceMap: false,
+            mangle: false
+        })
+    ] : []
 };

@@ -10,7 +10,6 @@ module cda.common {
         }
 
         setColor(color): void {
-            console.log(color);
             this.currentColor = color;
             this.cdStatusbar.setColor(color);
         }

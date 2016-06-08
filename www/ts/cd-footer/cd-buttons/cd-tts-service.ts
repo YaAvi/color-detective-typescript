@@ -7,10 +7,6 @@ module cda.footer.buttons {
                 text: colorName,
                 local: 'en-GB',
                 rate: 0.8
-            }, function() {
-                //success
-            }, function(reason) {
-                //error
             });
         }
     }

@@ -1,7 +1,7 @@
 import Ctrl = require("./cd-image-controller");
 module cda.image {
 	export class imageComponent {
-		templateUrl = 'build/cd-image/cd-image-template.html';
+		templateUrl = 'ts/cd-image/cd-image-template.html';
 		controller = Ctrl.cda.image.CdImageCtrl;
 	}
 	

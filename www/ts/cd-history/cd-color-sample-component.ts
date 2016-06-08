@@ -1,6 +1,6 @@
 module cda.history {
 	export class ColorSampleComponent {
-		templateUrl = 'build/cd-history/templates/cd-color-sample-template.html';
+		templateUrl = 'ts/cd-history/templates/cd-color-sample-template.html';
 		bindings: any = {
 			color: '='
 		};

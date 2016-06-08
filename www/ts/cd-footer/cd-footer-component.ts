@@ -1,7 +1,7 @@
 import Ctrl = require('./cd-footer-controller'); 
 module cda.footer.buttons {
 	export class FooterComponent {
-		templateUrl = 'build/cd-footer/cd-footer-template.html';
+		templateUrl = 'ts/cd-footer/cd-footer-template.html';
 		controller = Ctrl.cda.footer.CdFooterCtrl;
 	}
 	
