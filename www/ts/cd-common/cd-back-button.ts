@@ -6,7 +6,7 @@ export module cda.common {
 
 		onBackKeyDown(): void  {
 			this.cdUrl.close();
-			this.cdHistory.closeHistory();
+			this.cdHistory.close();
 		}
 
 		onDeviceReady(): void {

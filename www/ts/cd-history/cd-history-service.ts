@@ -7,7 +7,7 @@ module cda.service {
             this.open = false;
         }
 
-        closeHistory(): void {
+        close(): void {
             this.open = false;
         }
 
