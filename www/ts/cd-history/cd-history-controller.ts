@@ -1,7 +1,7 @@
 export module cda.history {
 	export class CdHistoryCtrl {
 		
-		constructor(private cdHistory, private cdCurrentColor) {}
+		constructor(private cdHistory, private cdCurrentColor, private cdStatusbar) { }
 
 		history(): [any] {
 			return this.cdHistory.getHistory();
@@ -21,6 +21,11 @@ export module cda.history {
 
 		color(): any {
 			return this.cdCurrentColor.getColor();
+		}
+
+		setCurrentColor(color): void {
+			this.cdCurrentColor.setColor(color);
+			this.cdStatusbar.setColor(color);
 		}
 	}
 }

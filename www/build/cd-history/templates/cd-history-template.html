@@ -5,7 +5,7 @@
     </div>
     <div class="color-sample-overflow">
     	<div class="color-samples" ng-repeat="color in $ctrl.history() | reverse" class="color-samples" style="background-color:{{color.style.color}}; color:{{color.style.font}}">
-        	<cd-color-sample color="color"></cd-color-sample>
+        	<cd-color-sample ng-click="$ctrl.setCurrentColor(color)" color="color"></cd-color-sample>
     	</div>
     </div>
 </div>

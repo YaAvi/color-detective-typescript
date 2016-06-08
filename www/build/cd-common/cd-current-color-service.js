@@ -10,6 +10,7 @@ var cda;
                 return this.currentColor;
             };
             CdCurrentColor.prototype.setColor = function (color) {
+                console.log(color);
                 this.currentColor = color;
             };
             return CdCurrentColor;
