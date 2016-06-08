@@ -1,5 +1,0 @@
-<div class="color" style="background-color:{{$ctrl.color().style.color || 'rgb(0, 0, 0)'}}">
-    <div class="color-name-div" ng-click="$ctrl.speak($ctrl.color().name)">{{$ctrl.color().name || 'SELECTED_COLOR' | translate}} </div>
-    <div class="color-rgb" ng-show="$ctrl.showRgb" ng-click="$ctrl.showRgb = !$ctrl.showRgb" style="background-color:rgb({{$ctrl.color().r-10}},{{$ctrl.color().g-10}},{{$ctrl.color().b-10}});">({{$ctrl.color().r || 0}}, {{$ctrl.color().g || 0}}, {{$ctrl.color().b || 0}})</div>
-    <div class="color-hex" ng-show="!$ctrl.showRgb" ng-click="$ctrl.showRgb = !$ctrl.showRgb" style="background-color:rgb({{$ctrl.color().r-10}},{{$ctrl.color().g-10}},{{$ctrl.color().b-10}});">{{$ctrl.color().hex || '#000000'}}</div>
-</div>
