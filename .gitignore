@@ -1,9 +1,19 @@
-#gitignore 
+#typescript build 
 www/build/
+
+#webpack bundle
 www/dist/
+
+#cordova hoooks
 hooks/
+
+#node :|
 node_modules/
+
+#cordova platforms
 platforms/
+
+#fonts
 www/012cf6a10129e2275d79d6adac7f3b02.woff
 www/570eb83859dc23dd0eec423a49e147fe.woff2
 www/a37b0c01c0baf1888ca812cc0508f6e2.ttf

@@ -1,7 +1,7 @@
 module cda.common {
     export class CdCurrentColor {
         currentColor: any;
-        constructor(private cdStatusbar) {
+        constructor(private cdStatusbar, private $cordovaRecents) {
             this.currentColor = {};
         }
 
@@ -12,9 +12,10 @@ module cda.common {
         setColor(color): void {
             this.currentColor = color;
             this.cdStatusbar.setColor(color);
+            this.$cordovaRecents.setColor(color.hex);
         }
     }
     
     angular.module('cda').service('cdCurrentColor', CdCurrentColor);
  }
- 
+
