@@ -2,7 +2,7 @@
     width: 100%;
     font-size: 1em;
     position: fixed;
-    bottom: 69px;
+    bottom: 63px;
     height: 65px;
     text-align: center;
     background-color: #777777;
@@ -12,14 +12,20 @@
 .color-name-div {
     float: left;
     width: 60%;
-    padding: 23px 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .color-rgb,
 .color-hex {
     float: left;
     width: 40%;
-    padding: 23px 0px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .color-rgb:active{
     opacity: 0.8;

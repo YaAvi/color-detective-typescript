@@ -1,6 +1,6 @@
-# color-detective-angular
+# color-detective-typescript
 
-A color picker angular project.
+A color picker typescript & angular project.
 
 How to use:
 

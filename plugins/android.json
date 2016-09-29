@@ -7,10 +7,10 @@
         "files": {}
     },
     "installed_plugins": {
-        "cordova-plugin-whitelist": {
+        "cordova-plugin-camera": {
             "PACKAGE_NAME": "com.hoy.colordetective"
         },
-        "cordova-plugin-camera": {
+        "cordova-plugin-recentscontrol": {
             "PACKAGE_NAME": "com.hoy.colordetective"
         },
         "cordova-plugin-splashscreen": {
@@ -22,7 +22,7 @@
         "cordova-plugin-tts": {
             "PACKAGE_NAME": "com.hoy.colordetective"
         },
-        "cordova-plugin-recentscontrol": {
+        "cordova-plugin-whitelist": {
             "PACKAGE_NAME": "com.hoy.colordetective"
         }
     },

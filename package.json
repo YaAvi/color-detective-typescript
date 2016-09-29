@@ -1,7 +1,7 @@
 {
-  "name": "color-detective-angular",
+  "name": "color-detective-typescript",
   "version": "1.0.0",
-  "description": "A color picker angular project.",
+  "description": "A color picker typescript & angular project.",
   "main": "index.js",
   "scripts": {
     "release": "SET PROD_ENV=1&&webpack && cordova build --release",

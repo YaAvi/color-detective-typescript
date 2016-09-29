@@ -21,16 +21,15 @@ module cda.image {
 
             pColor = ctx.getImageData(xCord - imageBounds.left, yCord, 1, 1).data;
             if (pColor[3] !== 0) {
-                var rgb = 'rgb(' + pColor[0] + ', ' + pColor[1] + ', ' + pColor[2] + ')',
-                    colorInHex = this.cdRgbToHex.rgbToHex(pColor[0], pColor[1], pColor[2]),
+                var colorInHex = this.cdRgbToHex.rgbToHex(pColor[0], pColor[1], pColor[2]),
                     name = this.cdDetectColor.colorName(pColor[0], pColor[1], pColor[2]),
-                    font = this.cdFontColor.get(pColor[0], pColor[1], pColor[2]),
-                    color = new Color.cda.common.Color(pColor[0], pColor[1], pColor[2], colorInHex, rgb, name, font);
+                    font = this.cdFontColor.get(pColor[0], pColor[1], pColor[2]);
+                var color = new Color.cda.common.Color(pColor[0], pColor[1], pColor[2], colorInHex, name, font);
                 this.cdHistory.add(color);
                 this.cdCurrentColor.setColor(color);
             }
         }
     }
-    
+
     angular.module('cda').service('cdTouch', CdTouch);
 }

@@ -7,14 +7,14 @@ export module cda.common {
 		name: string;
 		style: any;
 
-		constructor(R, G, B, hex, rgb, name, font) {
+		constructor(R: number, G: number, B: number, hex: string, name: string, font: string) {
 			this.r = R;
 			this.g = G;
 			this.b = B;
 			this.hex = hex;
 			this.name = name;
 			this.style = {
-				color: rgb,
+				color: 'rgb(' + R + ', ' + G + ', ' + B + ')',
 				font: font
 			};
 
