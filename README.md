@@ -18,3 +18,5 @@ rgb value in history.
 
 You can browse images using the top right buttons.
 Donate using the $ button. ^_^
+
+[Play Store Link](https://play.google.com/store/apps/details?id=com.hoy.colordetective)
